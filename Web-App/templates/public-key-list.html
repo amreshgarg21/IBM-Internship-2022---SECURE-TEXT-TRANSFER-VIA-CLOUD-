@@ -26,12 +26,21 @@
 
     <!-- CSS -->
 
-    <style type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="../static/css/custom.css">
+
+    <style>
+        a {
+            color: yellow;
+        }
+        
+        a:hover {
+            color: rgb(226, 226, 142);
+        }
     </style>
-
-    <!-- Script -->
-    <script></script>
 
 </head>
 
@@ -66,7 +75,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/public-key-directory/">DOWNLOAD PUBLIC KEY</a>
+                    <a class="nav-link highlight" href="/public-key-directory/">DOWNLOAD PUBLIC KEY</a>
                 </li>
 
                 <li class="nav-item active">
@@ -83,13 +92,13 @@
 
     <!-- Main Container Starts -->
 
-    <div class="container-fluid" style="background-color: rgb(181, 119, 36);">
+    <div class="container-fluid">
 
         <!-- Inner Container 1 Starts -->
 
-        <div class="container" style="background-color: rgb(184, 232, 184); height: 95vh;">
+        <div class="container text-center" style="height: 95vh;">
 
-            <div class="text-center">
+            <div class="text-center p-2">
 
                 {%if msg != ''%}
                 <h3>{{msg}}</h3>
@@ -97,22 +106,22 @@
 
             </div>
 
-            <h3 class="text-center">Download the Public-key from here:</h3><br>
+            <h3 class="text-center p-2 animate__animated animate__fadeInDown">Download The Public-Key From Here:</h3><br>
 
-            <div>
+            <div class="table-responsive mx-auto animate__animated animate__zoomIn">
 
-                <table>
+                <table class="table-bordered mx-auto">
                     <thead>
                         <tr>
-                            <th>PUBLIC KEYS</th>
-                            <th>UPLOADER</th>
+                            <th class="p-3">PUBLIC KEYS</th>
+                            <th class="p-3">UPLOADER</th>
                         </tr>
                     </thead>
                     <tbody>
                         {%for itr in range(length):%}
                         <tr>
-                            <td><a href="retrieve/key/{{directory[itr]}}">Click here to download public key</a></td>
-                            <td>{{directory[itr]}}</td>
+                            <td class="p-2"><a href="retrieve/key/{{directory[itr]}}">Click here to download public key</a></td>
+                            <td class="p-2">{{directory[itr]}}</td>
                         </tr>
                         {%endfor%}
                     </tbody>
@@ -120,7 +129,6 @@
                 {%endif%}
 
             </div>
-
 
         </div>
 
@@ -130,7 +138,11 @@
 
     <!-- Main Container Ends -->
 
+    <script src="../static/js/script1.js"></script>
 
+    <script>
+        new WOW().init();
+    </script>
 
 </body>
 
