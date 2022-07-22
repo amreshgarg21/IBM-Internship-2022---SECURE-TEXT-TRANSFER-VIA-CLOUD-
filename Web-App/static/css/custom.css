@@ -22,3 +22,23 @@ nav li a:hover {
     background: linear-gradient(145deg, #212124, #616167);
     border-radius: 40px;
 }
+
+
+/* Upload Button */
+
+.btn-grad {
+    background-image: linear-gradient(to right, #1d8903 0%, #2e8a90 51%, #228308 100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

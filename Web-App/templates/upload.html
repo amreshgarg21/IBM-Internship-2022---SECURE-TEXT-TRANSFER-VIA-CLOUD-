@@ -26,12 +26,11 @@
 
     <!-- CSS -->
 
-    <style type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    </style>
+    <!-- Custom CSS -->
 
-    <!-- Script -->
-    <script></script>
+    <link rel="stylesheet" href="../static/css/custom.css">
 
 </head>
 
@@ -58,7 +57,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/upload-file">UPLOAD FILE</a>
+                    <a class="nav-link highlight" href="/upload-file">UPLOAD FILE</a>
                 </li>
 
                 <li class="nav-item active">
@@ -83,24 +82,23 @@
 
     <!-- Main Container Starts -->
 
-    <div class="container-fluid" style="background-color: rgb(181, 119, 36);">
+    <div class="container-fluid">
 
         <!-- Inner Container 1 Starts -->
 
-        <div class="container" style="background-color: rgb(184, 232, 184); height: 95vh;">
+        <div class="container" style="height: 95vh;">
 
             <br>
-            <h3 class="text-center">Make sure that the file has been encrypted using the GUI.</h3>
+            <h3 class="text-center animate__animated animate__zoomIn" style="color: azure;">Make sure that the file has been encrypted using the GUI.</h3>
             <br>
 
-            <div>
+            <div class="text-center animate__animated animate__fadeIn">
 
                 <form action="/data" method="POST" enctype="multipart/form-data">
 
-                    <br>
-                    <input id="file-upload" name="file" type="file" onchange="return fileValidation()" required>
+                    <input id="file-upload" class="" style="width: 20vw;" name="file" type="file" onchange="return fileValidation()" required>
 
-                    <div>
+                    <div class="m-2">
 
                         <label for="file-upload" class="custom-file-upload">
 						
@@ -110,12 +108,8 @@
 
                     </div>
 
-                    <br>
-                    <br>
-
                     <label>Extensions allowed: .txt </label>
 
-                    <br>
 
                     <label id="file-name" style="font-weight:300;font-size: 25px;
 					color:#FFFFFF;"></label>
@@ -163,16 +157,16 @@
 
                     <br>
                     <br>
-                    <input type="submit" class="btn btn-primary" value="SUBMIT">
+                    <input type="submit" class="btn btn-grad" value="SUBMIT">
 
                     <div class="container" style="font-size:25px">
-                        <br>
+
                         <br>
 
-                        <h3>
+                        <h4 class="animate__animated animate__fadeInDown p-1">
                             Select the file you wish to upload to the cloud.
                             <br>
-                        </h3>
+                        </h4>
 
                     </div>
 
@@ -188,7 +182,11 @@
 
     <!-- Main Container Ends -->
 
+    <script src="../static/js/script1.js"></script>
 
+    <script>
+        new WOW().init();
+    </script>
 
 </body>
 
