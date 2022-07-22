@@ -42,3 +42,36 @@ nav li a:hover {
     color: #fff;
     text-decoration: none;
 }
+
+
+/* Register Button */
+
+.btn-grad1 {
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 51%, #00c6ff 100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-grad1:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Modal Background */
+
+.modal-background {
+    /* From https://css.glass */
+    background: rgba(0, 205, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.9px);
+    -webkit-backdrop-filter: blur(16.9px);
+    border: 1px solid rgba(0, 205, 255, 1);
+}
