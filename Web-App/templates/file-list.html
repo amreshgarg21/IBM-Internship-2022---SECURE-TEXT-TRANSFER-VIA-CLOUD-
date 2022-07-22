@@ -26,12 +26,11 @@
 
     <!-- CSS -->
 
-    <style type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    </style>
+    <!-- Custom CSS -->
 
-    <!-- Script -->
-    <script></script>
+    <link rel="stylesheet" href="../static/css/custom.css">
 
 </head>
 
@@ -62,7 +61,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/file-directory">FILE DIRECTORY</a>
+                    <a class="nav-link highlight" href="/file-directory">FILE DIRECTORY</a>
                 </li>
 
                 <li class="nav-item active">
@@ -83,11 +82,11 @@
 
     <!-- Main Container Starts -->
 
-    <div class="container-fluid" style="background-color: rgb(181, 119, 36);">
+    <div class="container-fluid">
 
         <!-- Inner Container 1 Starts -->
 
-        <div class="container" style="background-color: rgb(184, 232, 184); height: 95vh;">
+        <div class="container" style="height: 95vh;">
 
             <div class="row">
 
@@ -101,31 +100,34 @@
 
 
 
-            <div class="row">
+            <div class="row p-4">
 
-                <h3 class="mx-auto">Uploaded Text Files</h3>
-
-            </div>
-
-            <div class="row">
-
-                <h5 class="mx-auto">Download The File You Want To Decrypt:</h5>
+                <h3 class="mx-auto animate__animated animate__zoomIn">UPLOADED TEXT FILES</h3>
 
             </div>
 
-            <div class="row">
+            <div class="row p-2">
 
-                <div class="col-md-12">
+                <h5 class="mx-auto animate__animated animate__fadeInUp">DOWNLOAD THE FILE YOU WANT TO DECRYPT:</h5>
+
+            </div>
+
+            <div class="row p-2">
+
+                <div class="col-md-12 text-center">
 
                     {% for itr in range(length):%}
 
-                    <ul>
-                        <div>
-                            <li>
-                                <a href="retrieve/file/{{list[itr]}}">{{list[itr]}}</a>
-                            </li>
-                        </div>
-                    </ul>
+                    <div class="p-1 animate__animated animate__fadeIn" style="animation-duration: 2800ms;">
+
+                        <h6>
+
+                            <a style="color: yellow; font-weight: 750;" href="retrieve/file/{{list[itr]}}">{{list[itr]}}</a>
+
+                        </h6>
+
+                    </div>
+
 
                     {% endfor%} {%endif%}
 
@@ -141,7 +143,11 @@
 
     <!-- Main Container Ends -->
 
+    <script src="../static/js/script1.js"></script>
 
+    <script>
+        new WOW().init();
+    </script>
 
 </body>
 
